@@ -131,7 +131,7 @@ type HTTPServer struct {
 	serviceAccountsService    serviceaccounts.Service
 	authInfoService           authinfoservice.Service
 	TeamPermissionsService    *resourcepermissions.Service
-	NotificationService       notifications.NotificationService
+	NotificationService       *notifications.NotificationService
 }
 
 type ServerOptions struct {
@@ -156,9 +156,13 @@ func ProvideHTTPServer(opts ServerOptions, cfg *setting.Cfg, routeRegister routi
 	quotaService *quota.QuotaService, socialService social.Service, tracer tracing.Tracer,
 	encryptionService encryption.Internal, updateChecker *updatechecker.Service, searchUsersService searchusers.Service,
 	dataSourcesService *datasources.Service, secretsService secrets.Service, queryDataService *query.Service,
+<<<<<<< HEAD
 	teamGuardian teamguardian.TeamGuardian, serviceaccountsService serviceaccounts.Service,
 	authInfoService authinfoservice.Service, resourcePermissionServices *resourceservices.ResourceServices,
 	notifications notifications.NotificationService) (*HTTPServer, error) {
+=======
+	teamGuardian teamguardian.TeamGuardian, serviceaccountsService serviceaccounts.Service, notifications *notifications.NotificationService) (*HTTPServer, error) {
+>>>>>>> 8339764e33 (Refactor: Remove bus from password.go and adjust tests)
 	web.Env = cfg.Env
 	m := web.New()
 

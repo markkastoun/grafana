@@ -51,7 +51,7 @@ require (
 	github.com/google/uuid v1.3.0
 	github.com/google/wire v0.5.0
 	github.com/gorilla/websocket v1.4.2
-	github.com/gosimple/slug v1.9.0
+	github.com/gosimple/slug v1.12.0
 	github.com/grafana/cuetsy v0.0.0-20211119211437-8c25464cc9bf
 	github.com/grafana/grafana-aws-sdk v0.9.1
 	github.com/grafana/grafana-plugin-sdk-go v0.123.0
@@ -183,7 +183,7 @@ require (
 	github.com/gomodule/redigo v2.0.0+incompatible // indirect
 	github.com/google/btree v1.0.1 // indirect
 	github.com/google/flatbuffers v2.0.0+incompatible // indirect
-	github.com/googleapis/gax-go/v2 v2.1.1
+	github.com/googleapis/gax-go/v2 v2.1.1 // indirect
 	github.com/gorilla/mux v1.8.0 // indirect
 	github.com/grafana/grafana-google-sdk-go v0.0.0-20211104130251-b190293eaf58
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.1-0.20191002090509-6af20e3a5340 // indirect
@@ -223,7 +223,6 @@ require (
 	github.com/prometheus/node_exporter v1.0.0-rc.0.0.20200428091818-01054558c289 // indirect
 	github.com/prometheus/procfs v0.6.0 // indirect
 	github.com/protocolbuffers/txtpbfmt v0.0.0-20201118171849-f6a6b3f636fc // indirect
-	github.com/rainycape/unidecode v0.0.0-20150907023854-cb7f23ec59be // indirect
 	github.com/rs/cors v1.8.0 // indirect
 	github.com/russross/blackfriday/v2 v2.0.1 // indirect
 	github.com/sean-/seed v0.0.0-20170313163322-e2103e2c3529 // indirect
@@ -248,18 +247,17 @@ require (
 	golang.org/x/text v0.3.7 // indirect
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
-	google.golang.org/genproto v0.0.0-20211018162055-cf77aa76bad2
+	google.golang.org/genproto v0.0.0-20211018162055-cf77aa76bad2 // indirect
 	gopkg.in/asn1-ber.v1 v1.0.0-20181015200546-f715ec2f112d // indirect
 )
 
-require (
-	cloud.google.com/go/kms v1.1.0
-	github.com/Azure/go-autorest/autorest/adal v0.9.15
-	github.com/grafana/dskit v0.0.0-20211011144203-3a88ec0b675f
-)
+require cloud.google.com/go/kms v1.1.0
 
 require (
+	github.com/Azure/go-autorest/autorest/adal v0.9.15 // indirect
 	github.com/containerd/containerd v1.5.9 // indirect
+	github.com/gosimple/unidecode v1.0.1 // indirect
+	github.com/grafana/dskit v0.0.0-20211011144203-3a88ec0b675f // indirect
 	github.com/imdario/mergo v0.3.12 // indirect
 	github.com/klauspost/compress v1.13.1 // indirect
 	github.com/opencontainers/image-spec v1.0.2 // indirect

@@ -13,10 +13,9 @@ echo -e "Copying grafana backend files to temp dir..."
 
 if [[ ! -f bin/linux-amd64/grafana-server ]]; then
   echo "bin/linux-amd64/grafana-server missing, trying local grafana-server binary"
-elif [[ ! -f bin/grafana-server ]] ; then
-  echo bin/grafana-server missing
-  exit 1
 fi
+
+echo starting server
 
 cp -r ./bin $RUNDIR
 cp -r ./public $RUNDIR
@@ -39,7 +38,7 @@ cp -r devenv $RUNDIR
 
 echo -e "Starting Grafana Server port $PORT"
 
-$RUNDIR/bin/grafana-server \
+$RUNDIR/bin/linux-amd64/grafana-server \
   --homepath=$HOME_PATH \
   --pidfile=$RUNDIR/pid \
   cfg:server.http_port=$PORT \
